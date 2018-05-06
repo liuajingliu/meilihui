@@ -1,0 +1,198 @@
+﻿.icon_from{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	background:url(../img/icon_new.png) no-repeat;
+	font-size:0;
+	line-height:0;
+	overflow:hidden
+}
+.loadingnow{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:30px;
+	height:30px;
+	background:url(../img/icon_loading.gif) no-repeat;
+	text-indent:-9999px;
+	overflow:hidden
+}
+.icon_arrow_left_a{
+	width:4px;
+	height:8px;
+	background-position:-164px -121px
+}
+.icon_arrow_right_a{
+	width:4px;
+	height:8px;
+	background-position:-172px -121px
+}
+.icon_arrow_up_a{
+	width:8px;
+	height:4px;
+	background-position:-180px -125px
+}
+.icon_arrow_down_a{
+	width:8px;
+	height:4px;
+	background-position:-191px -125px
+}
+.icon_arrow_left_b{
+	width:10px;
+	height:18px;
+	background-position:-91px -111px
+}
+.icon_arrow_right_b{
+	width:10px;
+	height:18px;
+	background-position:-107px -111px
+}
+.icon_arrow_up_b{
+	width:18px;
+	height:10px;
+	background-position:-121px -119px
+}
+.icon_arrow_down_b{
+	width:18px;
+	height:10px;
+	background-position:-142px -119px
+}
+.icon_arrow_left_c{
+	width:10px;
+	height:18px;
+	background-position:-91px -136px
+}
+.icon_arrow_right_c{
+	width:10px;
+	height:18px;
+	background-position:-107px -136px
+}
+.icon_arrow_up_c{
+	width:18px;
+	height:10px;
+	background-position:-121px -144px
+}
+.icon_arrow_down_c{
+	width:18px;
+	height:10px;
+	background-position:-142px -144px
+}
+.icon_arrow_left_d{
+	width:20px;
+	height:40px;
+	background-position:-3px -65px
+}
+.icon_arrow_right_d{
+	width:20px;
+	height:40px;
+	background-position:-32px -65px
+}
+.icon_video_play_a{
+	width:108px;
+	height:108px;
+	background-position:-390px -66px
+}
+.icon_video_pause_a{
+	width:108px;
+	height:108px;
+	background-position:-390px -177px
+}
+.icon_video_play_b{
+	width:34px;
+	height:34px;
+	background-position:-223px -67px
+}
+.icon_video_pause_b{
+	width:34px;
+	height:34px;
+	background-position:-263px -67px
+}
+.icon_amplify_a{
+	width:20px;
+	height:20px;
+	background-position:-7px -159px
+}
+.icon_gift_a{
+	width:19px;
+	height:16px;
+	background-position:-117px -163px
+}
+.icon_horn_a{
+	width:16px;
+	height:13px;
+	background-position:-35px -166px
+}
+.icon_plus_a{
+	width:15px;
+	height:15px;
+	background-position:-59px -164px
+}
+.icon_reduction_a{
+	width:15px;
+	height:15px;
+	background-position:-79px -164px
+}
+.icon_heart_a{
+	width:12px;
+	height:11px;
+	background-position:-100px -168px
+}
+.icon_one_a{
+	width:27px;
+	height:27px;
+	background-position:-7px -5px
+}
+.icon_two_a{
+	width:27px;
+	height:27px;
+	background-position:-43px -5px
+}
+.icon_three_a{
+	width:27px;
+	height:27px;
+	background-position:-78px -5px
+}
+.icon_four_a{
+	width:27px;
+	height:27px;
+	background-position:-116px -5px
+}
+.icon_five_a{
+	width:27px;
+	height:27px;
+	background-position:-155px -5px
+}
+.icon_one_b{
+	width:21px;
+	height:21px;
+	background-position:-11px -39px
+}
+.icon_two_b{
+	width:21px;
+	height:21px;
+	background-position:-46px -39px
+}
+.icon_three_b{
+	width:21px;
+	height:21px;
+	background-position:-81px -39px
+}
+.icon_four_b{
+	width:21px;
+	height:21px;
+	background-position:-119px -39px
+}
+.icon_five_b{
+	width:21px;
+	height:21px;
+	background-position:-158px -39px
+}
+.bg_in_follow_a{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	overflow:hidden;
+	width:64px;
+	height:62px;
+	background-position:-435px -1px
+}

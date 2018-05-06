@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>用户登录页面</title>
+<link href="../css/login.css" rel="stylesheet" type="text/css">
+<link href="../css/base.css" rel="stylesheet" type="text/css">
+<link href="../css/loginpage.css" rel="stylesheet" type="text/css">
+</head>
+<body ondblclick="return false;">
+	<div class="login_wrapper">
+    <div class="login_container" style="background: url('../img/20170526172702718.jpg@1000w_827h_2e_100q') no-repeat;">
+        <div class="login_header" >
+        </div>
+        <div class="login_content">
+        	<div class="login_main">
+                <div class="hydl_regsiter">
+                    <h2>会员登录</h2>
+                    <span>没有账号？<a href="register.html">免费注册</a></span>
+                </div>
+                <div class="hydl_loginbar">
+                <form  action="/user/tologin" method="post"  id="loginForm" autocomplete="on">
+                    <ul>
+                        <li><span >账户名:</span><input id = "userAccount" name="userAccount" type="text" value="已验证手机号/邮箱" >
+                        	<p id = "Act_error" class="error"></p>
+                        </li>
+                        <li><span>密码:</span><input name="passWord" type="password" id="password">
+                        	<p id = "Pwd_error"></p>
+                        	<p id="lockInfo" class="hidstyle">出于安全考虑，系统已冻结您的账户，请联系客服：<a class="buybtn" style="cursor:pointer;">在线咨询</a>或400-664-6698</p>
+                        </li>
+                        <li id="rdm_img" class="hidstyle"><span>验证码:</span>
+                        	<input maxlength="6" onkeyup="value=value.replace(/[^\w/]/ig,'')" class="yanzheng" name="random" type="text" onblur = "checkFormInfo('login','no','','','random')">
+                        	<img id="rdm" src= "../img/4ebbde65f95242fc93a941a5bb495768.gif" onclick="getResetRandom('',this)" style=" border: 1px solid #999;cursor: pointer;">
+                        	<p class = "Rdm_error" id="Rdm_error"></p>
+                        </li>
+                    </ul>
+                   <input type="hidden" value="yes" id="isRemenbered" name="isRemenbered"/>
+                   <input type="hidden" id="errorTime" value="0"/>
+                   <input type="hidden" id="errorGetRDM" value="6"/>
+                   <input type="hidden" id="errorGetLock" value="10"/>
+                <div style="clear:both;"></div>
+                <div class="hydl_btn">
+                	<a id="submitBtn" style="cursor: pointer;">会员登录</a>
+                </div>
+                </form> 
+                </div>
+                <div class="hydl_login">
+                    <p><span onclick="isRemenber()" id="isRemenber" class="selected chengepst" style="float:left;">复选框</span>下次自动登录</p>
+                    <a href="#"><span>忘记密码</span></a>
+                </div>
+                <div class="hydl_partner">
+                    <h4>联名登录:</h4>
+                    <a href="#" class="weibo" onclick="toweiboLogin()"></a>
+                	<a href="#" class="zhifubao" onclick="toAlipayLogin()"></a>
+                	<a href="#" class="weixin" onclick="toWeChatLogin()"></a>
+                </div>
+                <div class="xian"></div>
+                <div class="erweima">
+                    <img src="../img/imges_saomiao.jpg" />
+                  <p>扫描二维码或发送短信<br>“MLH”到“12114”<br>下载APP尊享独家优惠</p>
+                </div>              
+         	</div>                     
+        </div>
+          <div class="footer_advantage">
+                <ul>
+                <li><a class="a1" href="#">100%品牌授权正品</a></li>
+                    <li><a class="a2" href="#">满688免运费</a></li>
+                    <li><a class="a3" href="#">7天无条件退货</a></li>
+                    <li><a class="a4" href="#">超值折扣</a></li>
+                    <li><a class="a5"  href="#">9点限时闪购</a></li>
+                    <li class="footer_advantage_right"><a class="a6" href="#">400-664-6698</a></li>
+                </ul>
+            </div>
+            <p class="footer_copyright">COPYRIGHT©2016 杭州魅俪信息技术有限公司版权所有 &nbsp;&nbsp;&nbsp;&nbsp;浙ICP备16004860号-1</p>
+            </div>
+    </div>
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	//console.log(document.cookie);
+	var users;
+	var arr = document.cookie.split("; ");
+	for(var i = 0;i <arr.length;i ++){
+		var value = arr[i].split("=");
+		if(value[0].indexOf("user_") == 0){
+			users = eval("("+value[1]+")");
+			console.log(users.name);
+			console.log(users.pwd);
+		}
+	}
+    $(function(){//页面加载完成时
+        $('#userAccount').focus(function(){//当鼠标点击账号输入框时；
+            $(this).val('');
+            $('#Act_error').html('');           
+        })
+        $('#userAccount').blur(function(){
+            if($(this).val()==''){
+                $('#Act_error').html('请输入已验证的手机号或邮箱');
+            }
+        })
+        $('#submitBtn').click(function(){//登录的非空验证
+        	
+        	if($('#userAccount').val() == users.name && $("#password").val() == users.pwd){
+        		window.open('../index1.html');
+        	}else if(  ($(':password').val()==''|| $('#userAccount').val()=='')  ||  ($('#userAccount').val() != users.name ||  $("#password").val() != users.pwd)){
+        		alert("用户名与密码不匹配");
+        	}
+        })
+    })
+</script>
+</body>
+</html>

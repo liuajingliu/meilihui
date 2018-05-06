@@ -1,0 +1,578 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>魅力惠时尚奢侈品牌闪购网站 奢侈品排行榜销售NO.1 2000多个国际品牌官方合作伙伴-魅力惠官方网站</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />			
+	<style type="text/css">
+		.tabBodyDivShow{
+			display: block;
+		}
+		.tabBodyDivHid{
+			display: none;
+		}
+	</style>
+</head>
+<body >
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/siloNavBar.css" rel="stylesheet" type="text/css">
+<link href="css/columns_gwd.css" rel="stylesheet" type="text/css">
+<link href="css/dialog.css" rel="stylesheet" type="text/css">
+<link href="css/columns_productDetails.css" rel="stylesheet" type="text/css">
+<link href="css/wishlist.css" rel="stylesheet" type="text/css">
+<link href="css/shoppingbagv3new.css?version=1.0" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/cart.css" />
+<style type="text/css">
+	a.myMlh:hover{color:red}
+	
+</style>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.blockUI.js"></script>
+<!--页面顶部1--> 
+    <div class="header_container" name="header_container" id="header_container">
+        <div class="header">
+            <div class="quick_access">
+                <div class="quick_access_left">
+                    <ul id="ul_header">
+                		<input type='hidden' id='user_telphone' value=''>
+                		<input type='hidden' id='user_id' value='2086208699900069470'>
+	                		<li class="theLi" id="pup_mei">
+		                        <div class="pop_up" >
+		                            <div class="pop_up_myGlamour" >
+		                                <ul>
+		                                    <li><a class="order">订单管理</a></li>
+		                                    <li><a class="comment">购物评价</a></li>
+		                                    <li><a class="coupon">优惠券</a></li>
+		                                    <li><a class="information">账户信息</a></li>
+		                                    <li><a class="address">地址信息</a></li>
+		                                    <li><a class="password">修改密码</a></li>
+		                                </ul>
+		                            </div>
+		                        </div>
+	                       	 	<a class="myMlh" style="color:red;" href="#http://www.mei.com/myMeiOrders/myOrderList">我的账户</a>   
+	                        </li>
+                		
+                        <li class="theLi">
+                        	<a id="loginout" style="margin-left:12px;color:red">退出</a>
+                        </li>
+                        <li class="theLi"><span>|</span></li>
+                        <li class="theLi">
+                            <div class="pop_up">
+                                <div id="collect_tag_dialog" class="pop_up_box6" style="display:none;">
+                                    <div class="box_top">
+                                        <div class="top_img">
+                                        </div>
+                                    </div>
+                                    <div class="box_content">收藏成功!</div>
+                                </div>
+                            </div>
+                            <a href="#http://www.mei.com/PbMyStowe/brandCollection">收藏</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="quick_access_right">
+                    <ul>
+                        <li><span title="在线咨询" class="buybtn" style="cursor:pointer;">在线咨询</span></li>
+                        <li>|</li>
+                        <li>
+                            <div class="pop_up" id="mobilePop" style="display:none;">
+                                <div class="pop_up_app" >
+                                    <img src="img/qr_code.png">
+                                    <p>扫码下载APP</p>
+                                </div>  
+                            </div>
+                            <a href="#" onmouseover="$('#mobilePop').show();" onmouseout="$('#mobilePop').hide();">手机版</a>
+                        </li>
+                        <li>|</li>
+                        <li><a style="margin-left:10px;" class="imglink_weibo" target="_blank" href="#http://weibo.com/glamoursaleschina" onclick="clicksina();">新浪微博</a></li>
+                    </ul>
+                </div>
+            </div>
+          	 <div class="branding">
+                <a href="#http://www.mei.com/index.html" class="logo" title="魅力惠MEI.COM 时尚奢品 限时折扣">魅力惠</a>
+                <a class="logo_slogan" style="cursor: default;">时尚奢品&nbsp; 限时折扣</a>
+           </div>
+        </div>
+        <!--导航栏-->
+        <div class="nav_container" id="navBarId">
+	        <div class="nav">    
+	            <div class="shopping_bag" onclick="shoppingSkipBag();" onmouseenter="showSmallBag();" onmouseleave="hideSmallBag();" >
+	                <ul>
+	                    <li class="shopping_quantity" id="shopping_quantity">0</li>
+	                    <li>|</li>
+	                    <li id="shopping_amount">¥0.00</li>
+	                </ul>
+	            </div>          
+	            <div class="pop_up_shopping" id="pop_up_shopping" onmouseover="alwaysShow()" onmouseleave="hideSmallBag();">           
+	            </div> 
+	            <div class="header_menu" id="header_menu">
+	                <input type="hidden" id="selectedSilo" value="">
+	              	<ul>
+	                  	<li class="nav-li">
+	                        <!--弹出二级菜单-->
+	                        <a class="theNav" style="color: red;" id="2013000100000000008"  href="#index.html" >首页</a>
+	                  	</li>
+	                  	<li class="nav-li">
+	                        <!--弹出二级菜单-->                       
+	                        <div class="pop_up" style="display: block;">
+	                            <div class="pop_up_menu">
+	                                <div class="submenu">
+	                                    <p class="title">热门活动</p>
+	                                    <ul>
+	                                           <li><a href="list.html"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">IGER & MR MRS ITALY&nbsp;秋冬魅鞋美包</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">STUART WEITZMAN&nbsp;鞋履美包</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">TOD'S & HOGAN&nbsp;女士经典鞋履</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">MSGM,CESARE CASADEI&nbsp;等精选大牌女鞋</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">STUART WEITZMAN&nbsp;2017秋冬新品仙履</a></li>
+	                                           <li><a href="#" style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">GEGINA&nbsp;意式时尚 臻爱女装</a></li>
+	                                           <li><a href="#" style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">RAPIDO 女装&nbsp;引领都市运动新时尚（满减）</a></li>
+	                                           <li><a href="#" style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">LISA ZHOU&nbsp;唯美设计 优雅礼服</a></li>
+	                                    </ul>
+	                                    <p class="more"><a  href="#" >查看所有活动</a></p>
+	                                </div>
+	                                  <div class="submenu">
+	                                    <p class="title">商品分类</p>
+	                                    <ul class="submenu_ul">
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">鞋履</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">服装</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">包袋</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">手表&首饰</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">配饰</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">内衣</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">眼镜</a></li>
+	                                    </ul>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <a class="theNav" href="#" >女士</a>
+	                    </li>
+	                  	<li class="nav-li">
+	                        <!--弹出二级菜单-->
+	                        <div class="pop_up" style="display: block;">
+	                            <div class="pop_up_menu">
+	                                <div class="submenu">
+	                                    <p class="title">热门活动</p>
+	                                    <ul>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">TOD'S & HOGAN&nbsp;男士经典鞋履</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">JOHN GALLIANO，ROBERTO CAVALLI&nbsp;等精选大牌男鞋</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">CALVIN KLEIN COLLECTION&nbsp;男鞋专场（满减）</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">RAPIDO 男装&nbsp;引领都市运动新时尚（满减）</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">EMPORIO ARMANI&nbsp;城市精英秋季男士风尚</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">ARMANI EXCHANGE & ARMANI JEANS&nbsp;活力秋冬男士</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">VIVIENNE WESTWOOD&nbsp;男装</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">INITIAL&nbsp;轻剪裁男装及配饰</a></li>
+	                                    </ul>
+	                                    <p class="more"><a  href="#" >查看所有活动</a></p>
+	                                </div>
+	                                  <div class="submenu">
+	                                    <p class="title">商品分类</p>
+	                                    <ul class="submenu_ul">
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">鞋履</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">服装</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">配饰</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">包袋钱包</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">手表&首饰</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">内衣</a></li>
+	                                    </ul>
+	                                </div>
+	                            </div>
+	                        </div>
+	                       <a class="theNav"href="#silo/men.html" >男士</a>
+	                    </li>
+	                  	<li class="nav-li">
+	                        <div class="pop_up" style="display: block;">
+	                            <div class="pop_up_menu">
+	                                <div class="submenu">
+	                                    <p class="title">热门活动</p>
+	                                    <ul>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">秋季焕肤保湿&nbsp;赶走干燥肌</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">BEAUTY BOX&nbsp;旅行必备小美盒</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">LA MER 海蓝之谜&nbsp;源自深海的愈颜奇迹</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">CPB&nbsp;开启肌肤无瑕光源</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">超值组套专场&nbsp;整套买更划算</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">LANCOME兰蔻&nbsp;法国经典护肤彩妆甄选</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">SK-II&nbsp;开启肌肤晶莹之旅</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">ESTEE LAUDER雅诗兰黛&nbsp;修护法宝 定格年轻美肌</a></li>
+	                                    </ul>
+	                                    <p class="more"><a  href="#" >查看所有活动</a></p>
+	                                </div>
+	                                <div class="submenu">
+	                                    <p class="title">商品分类</p>
+	                                    <ul class="submenu_ul">
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">护肤</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">彩妆</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">香氛</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">美体</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">男士</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">保健</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">面膜</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">美容仪</a></li>
+	                                    </ul>
+	                                    <ul class="submenu_ul">
+	                                        <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">美发</a></li>
+	                                    </ul>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    	 <a class="theNav" href="#" >美妆</a>
+	                    </li>
+	                  	<li class="nav-li">
+	                        <!--弹出二级菜单-->
+	                        <div class="pop_up" style="display: block;">
+	                            <div class="pop_up_menu">
+	                                <div class="submenu">
+	                                    <p class="title">热门活动</p>
+	                                    <ul>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">和蓝 & THERMATEC&nbsp;日本瓷器&砂锅</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">FRETTE&nbsp;意大利皇室家居(满3000-300)</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">高品质&nbsp;生活小家电专场</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">TEMPUR&nbsp;美国航天局认证记忆枕</a></li>
+	                                           <li><a href="#" style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">WOOLTARA&nbsp;澳洲羊毛家居（补货上新）</a></li>
+	                                           <li><a href="#" style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">万圣节&nbsp;魔幻厨房美食派对</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">DOWNESSA&nbsp;澳洲手工地毯（满减）</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">ZWILLING&nbsp;双立人厨具</a></li>
+	                                    </ul>
+	                                    <p class="more"><a  href="#" >查看所有活动</a></p>
+	                                </div>
+	                                  <div class="submenu">
+	                                    <p class="title">商品分类</p>
+	                                    <ul class="submenu_ul">
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">床品</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">卫浴</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">厨具</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">摆件</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">食品</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">家电</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">旅游</a></li>
+	                                    </ul>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    <a class="theNav" href="#silo/lifestyle.html" >家居</a>
+	                    </li>
+	                  	<li class="nav-li">
+	                        <!--弹出二级菜单-->
+	                        <div class="pop_up" style="display: block;">
+	                            <div class="pop_up_menu">
+	                                <div class="submenu">
+	                                    <p class="title">热门活动</p>
+	                                    <ul>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">FENDI&nbsp;意大利大牌童装男童秋冬精选</a></li>
+	                                           <li><a href="#" style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">FENDI&nbsp;意大利大牌童装女童秋冬精选</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">TRUSSARDI&nbsp;意大利童装秋冬上新（首次上线）</a></li>
+	                                           <li><a href="#" style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">REIMA &nbsp;芬兰功能性童装鞋靴配饰专场</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">SCHWARTZ &nbsp;法国轻奢童装男童精选（满减）</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">SCHWARTZ&nbsp;法国轻奢童装女童精选（满减）</a></li>
+	                                           <li><a href="#" style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">PAUL SMITH&nbsp;英伦风童装</a></li>
+	                                           <li><a href="#" style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">DAVID CHARLES&nbsp;英国皇室男女童优雅礼服</a></li>
+	                                    </ul>
+	                                    <p class="more"><a  href="#" >查看所有活动</a></p>
+	                                </div>
+	                                  <div class="submenu">
+	                                    <p class="title">商品分类</p>
+	                                    <ul class="submenu_ul">
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">服装</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">鞋履</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">玩具</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">母婴</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">配饰</a></li>
+	                                       <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">其它</a></li>
+	                                    </ul>
+	                                </div>
+	                            </div>
+	                       </div>
+	                       <a class="theNav" id="2013000100000000005"  href="#silo/kids.html" >婴童</a>
+	                    </li>
+	                  	<li class="nav-li">
+	                        <!--弹出二级菜单-->
+	                         <div class="crossIcon"></div><!-- 海外icon -->
+	                        	<div class="pop_up" style="display: block;">
+	                            <div class="pop_up_menu1">
+	                                <div class="submenu">
+	                                    <p class="title">热门活动</p>
+	                                    <ul>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">ALEXANDER MCQUEEN&nbsp;潮流轻奢 男女围巾鞋履</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">PRADA&nbsp;意式风尚 时尚男女鞋</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">ADIDAS&nbsp;潮搭型走 男女运动鞋</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">NIKE&nbsp;型动集结 男女运动跑鞋</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">DUVETICA & PINKO等&nbsp;都市知性女装专场</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">HUGO BOSS & ARMANI JEANS等&nbsp;暖秋男士服饰专场</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">BURBERRY&nbsp;英伦甄选 女士服装</a></li>
+	                                           <li><a href="#"style="color:#666;" onmouseover="this.style.cssText='color:#db2726;'" onmouseout="this.style.cssText='color:#666;'">BURBERRY&nbsp;英伦甄选 男士服装</a></li>
+	                                    </ul>
+	                                    <p class="more"><a  href="#" >查看所有活动</a></p>
+	                                </div>
+	                            </div>
+	                        </div>
+	                         <a class="theNav"href="#" >海外</a>
+	                    </li>
+	                  	<li class="nav-li">
+	                        <!--弹出二级菜单-->
+	                        <a class="theNav"href="#"  >即将推出</a>                            
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	        </div>
+    	</div>       
+    </div>
+<!--页面顶部1 end--> 
+	<div class="content_container shoppingbag">
+		<div id="bagContent">
+			<h2 class="cart">
+				<span>商品库存有限，建议尽快提交订单，闪购到心仪的商品；促销优惠将按比例分摊至商品中。</span>
+				 购物袋
+			</h2>  
+			<!--全场优惠--> 
+			<div id="globalPromotion">
+				<div class="box_effect effect2">
+					<ul>
+						<li class="box_effect_bg effect_bg2">
+							<div class="box_effect_content">
+								<p>
+									满688元免运费				
+									<a href="#" class="toPage">去凑单></a>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>				    	
+			<div class="shoppinglistTab listTab3">
+				<a>在售</a>
+				<a>心愿单</a>
+				<a>已失效</a>				          	
+			</div>				        
+			<!--购物袋商品列表-->
+			<div id="tab1" class="shoppingCartContent">
+				<div class="shoppinglist listV3">	
+					<div class="list_title list_title2">
+						<ul>
+							<li class="checkAllBox">
+							    <input class='checkAll' type='checkbox'/><span class="checkText">全选</span>
+							</li>
+							<li class="list_name">商品信息</li>
+							<li>单价</li>
+							<li>数量</li>
+							<li>优惠</li>
+							<li>小计</li>
+							<li>操作</li>
+						</ul>
+					</div>	
+					<div class="list_content list_content2">
+						<div class="packageType clearfix">
+							<input class='checkAll' type='checkbox'/>
+							<h3>魅力惠直发</h3>
+						<span></span>				
+					</div>
+					<div id="xinxi">
+					</div>
+				</div>
+			</div>
+				<div class="clear"></div>
+				<div class="gwd_main gwd_main2">
+					<form id="from1" action="" method="post">
+						<input type="hidden" id="productIds" name="productIds"/>
+					</form>
+					<div class="gwd_main_right payBox payBox_bottom">
+						<div class="payPlane clearfix">
+							<div class="checkAllBox">
+								<input class='checkAll' type='checkbox'/>
+								<p class="checkText">
+									全选<span>已选<b id="checkedNum">0</b>件</span>
+								</p>
+							</div>				
+							<div class="gwd_main_right_div chkButtonBox">
+								<div  class="pop_up_box box3" style="display: none" id="bagStatus" status=""></div>
+								<span class="button4" id="deleteItem">删除</span><span class="button4" id="soldOut">清空售罄</span>
+							</div>				
+							<span class="button3 buttonGrey">结算</span>
+							<div class="gwd_main_right_div gwd_total">
+								总价（不含运费）：<span id="tol">￥0.00</span>
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div id="selectTips">
+				    <span class="tipsPanel"></span>
+				</div>
+				<div id="cartPopup">
+				    <div class="close3_btn">关闭</div>
+				    <div class="tipsInfo"></div>
+				    <div class="popBtn clearfix">
+				        <a class="deleteAll">确定</a>
+				        <a class="cancelBtn">再想想</a>
+				    </div>
+				</div>
+				<div id="overseaPopUp">
+				<div class="overseaTips">
+					<div class="close4_btn">关闭</div>
+					<div class="overseaTipsInfo">
+						<h5>特别提醒</h5>
+						<p>境内商品与海外直发商品需分开结算，请选择一项优先结算。</p>
+						<ul class="select-product-box">
+							<li class="normalProduct clearfix"><span class="check-normal checkedItem crossBtn"></span><span>境内商品</span></li>
+							<li class="crossProduct clearfix"><span class="check-cross crossBtn"></span><span>海外直发商品</span></li>
+						</ul>
+					</div>
+					<div class="popBtn clearfix">
+				        <a class="goToBag">返回购物袋</a>
+				        <a class="goToCheckBtn" href="#javascript:void(0)" onclick="chooseCheckoutType()">去结算</a>
+				    </div>
+				</div>
+			</div>
+			</div>
+			<div id="tab2" class="shoppingCartContent clearfix" style="display:none">
+				<div class="shoppinglist">
+					<p class="shoppingNothing">即将上新的商品可以加入心愿单啦！抢购快人一步，赶快行动吧~</p> 
+				</div>
+				<div id="qty_explain">
+				    <span class="explainPanel">商品库存不足</span>
+				</div>
+			    <div id="wishPopup">
+			        <div class="close3_btn">关闭</div>
+			        <div class="tipsInfo"></div>
+			        <div class="popBtn clearfix">
+			            <a class="wish_deleteAll">确定</a>
+			            <a class="cancelBtn">再想想</a>
+			        </div>
+			    </div>
+			</div>					    
+			<div id="tab3" class="shoppingCartContent clearfix" style="display:none">
+    	<div class="shoppinglist">
+            <p class="shoppingNothing">活动结束的商品会显示在此</p> 
+        </div>
+	</div>
+		</div>
+	</div>
+	    <div class="footer_container">
+	       <div class="footer"> 
+		        <div class="footer_advantage">
+		            <ul>
+		            <li><a class="a1">100%正品保证</a></li>
+		                <li><a class="a2" href="#">满688免运费</a></li>
+		                <li><a class="a3" href="#">7天无条件退货</a></li>
+		                <li><a class="a4" href="#">超值折扣</a></li>
+		                <li><a class="a5"  href="#">9点限时闪购</a></li>
+		                <li class="footer_advantage_right"><a class="a6" href="#">400－664－6698</a></li>
+		            </ul>
+		        </div>
+	            <p class="footer_link">
+	                <a  href="#">关于魅力惠</a>
+	                <a href="#">加入我们</a>
+	                <a href="#">联系我们</a>                
+	                <a href="#">使用帮助</a>
+	                <a href="#">使用规则</a>
+	                <a href="#">隐私声明</a>
+	                <a href="#">网站地图</a>
+	            </p>
+	            <p class="footer_copyright">
+	            	<span>COPYRIGHT©2016  杭州魅俪信息技术有限公司版权所有</span>浙ICP备16004860号-1
+	            </p>
+	            <p class="footer_license">
+	            	<span><a href="#"target="_blank" rel="nofollow"><img src="https://cdn11.mei.com/images/icon_badge.png" width="35" height="36"></a></span>
+	            </p>
+	            </div>
+	     </div>
+	</div>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script>
+	$(document).ready(function(){	
+	    	var $selectedSilo = $("#selectedSilo");   
+	    	if(typeof($selectedSilo) != "undefined" && $selectedSilo != null && $selectedSilo!= ""){   		
+	    		var $a = $selectedSilo.val();    		
+	    		if($a != "" && $a != null){
+	    			$("#header_menu .theNav").css("color","white");
+	    			if($a != "abc"){
+	    			   $("#"+$a).css("color","red");
+	    			}
+	    		}    		
+	    	}
+	       $("#header_menu ul li").hover(
+		    	function(){
+		    		  var $pop =  $(this).children(".pop_up").children(".pop_up_menu");
+		    		 // alert($pop.html());
+		    		  if($pop.length < 1){
+		    			  $pop = $(this).children(".pop_up").children(".pop_up_menu1");   
+		    			 
+		    		  }
+		    		  $pop.show();
+		    	},
+		    	function(){
+		    		var $pop =  $(this).children(".pop_up").children(".pop_up_menu");
+		    		if(typeof($pop) == "undefined" || 
+		    			(typeof($pop) != "undefined" && typeof($pop.html()) == "undefined")){
+		    			  	$pop = $(this).children(".pop_up").children(".pop_up_menu1");   
+		    		  	}
+		    		  	$pop.hide();
+		    	  	}
+		    );
+	});
+	function upComingAnchor(div_id,code) {
+	   	if(code == 6){
+		   var $div = $("#"+div_id);
+		   if(null != $div && typeof($div) != "undefined" ){
+		    	var t = $div.offset().top;
+		    	var h= t-60;
+		    	$("html,body").scrollTop(h);
+	       }
+	   	}else{
+		   window.location.href="/index.html?siloFlag=1";
+		}   	   
+   	} 
+</script>
+<script type="text/javascript">
+		console.log(document.cookie)
+		var arr = document.cookie.split('; ');				
+			for(var i = 0;i<arr.length;i++){
+				
+				var val = arr[i].split('=');
+				
+				console.log(val);
+				if(val[0].indexOf('product_') == 0){
+					console.log(val[0]);
+					var product = eval('('+val[1]+')');
+					console.log(product);
+					console.log(product.src);
+					console.log(product.zhongwen)
+					var $oUl = "<ul><li><input class='checkAll' type='checkbox'/><img src='"+product.src+"'height='85px' width='103px'/></li><li>"+product.zhongwen+"</li><li> "+product.price+"</li><li><span id='countReduce'>-</span><span id='quantity'>"+product.num+"</span><span id='countAdd'>+</span></li><li>￥0.00</li><li id='total'>"+product.num*product.price+"</li><li><span id='del'>删除</span></li></ul>";
+					$("#xinxi").append($oUl);															
+				}
+			}
+		$("#countReduce").click(function(){
+			
+			product.num--;
+
+          	if(product.num<1){
+           		 product.num = 1;
+          	}
+          	$('#quantity').html(product.num);
+          	$('#total').html(product.num * product.price);
+		});
+		$("#countAdd").click(function(){
+			product.num++;
+			$('#quantity').html(product.num);
+			$('#total').html(product.num * product.price);
+		});
+		$("#del").click(function(){
+			$(this).parent().parent().remove();
+			$("#xinxi").html("啊哦，您的购物车空空如也~");
+//			$("#xinxi").css({text-align:"center"});
+		})
+		$("#loginout").click(function(){
+			window.open('index.html');
+		})
+		$(".checkAll").click(function(){
+			$("#checkedNum").html(product.num);
+			$("#tol").html(product.num * product.price);
+			//red要加引号~
+			$(".button3").css({background:"red"});
+			
+		})
+	</script>
+	<script src="js/common.js"></script>
+</body>
+</html>
+
+			
+
+			    
